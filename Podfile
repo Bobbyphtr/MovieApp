@@ -16,8 +16,6 @@ pod 'RxSwift', '6.0.0'
 pod 'RxCocoa', '6.0.0'
 
    # Pods for other UI
-pod 'TPKeyboardAvoidingSwift'
-pod 'UIDeviceComplete'
 pod 'SwiftIcons', '~> 3.0'
 
 
