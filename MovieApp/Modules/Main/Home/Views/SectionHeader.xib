@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="SectionHeader" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otB-KU-kDC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-Oa-Gtf">
+                            <rect key="frame" x="16" y="14.5" width="107.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF3-Zn-onw">
+                            <rect key="frame" x="131.5" y="24.5" width="114.5" height="1"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="ah8-wq-jBh"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVM-bv-APr">
+                            <rect key="frame" x="254" y="10" width="50" height="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <state key="normal" title="See All">
+                                <color key="titleColor" systemColor="systemOrangeColor"/>
+                            </state>
+                            <connections>
+                                <action selector="onSeeAllTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="IkR-jE-hJx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="LF3-Zn-onw" firstAttribute="leading" secondItem="QQr-Oa-Gtf" secondAttribute="trailing" constant="8" id="Aaj-Hw-0i1"/>
+                        <constraint firstItem="GVM-bv-APr" firstAttribute="leading" secondItem="LF3-Zn-onw" secondAttribute="trailing" constant="8" id="OhF-hd-pXH"/>
+                        <constraint firstItem="QQr-Oa-Gtf" firstAttribute="centerY" secondItem="otB-KU-kDC" secondAttribute="centerY" id="cIT-Ue-SSs"/>
+                        <constraint firstItem="GVM-bv-APr" firstAttribute="centerY" secondItem="otB-KU-kDC" secondAttribute="centerY" id="eoo-vh-sKH"/>
+                        <constraint firstItem="QQr-Oa-Gtf" firstAttribute="leading" secondItem="otB-KU-kDC" secondAttribute="leading" constant="16" id="nbF-5C-2pM"/>
+                        <constraint firstAttribute="trailing" secondItem="GVM-bv-APr" secondAttribute="trailing" constant="16" id="vcW-dO-h6I"/>
+                        <constraint firstItem="LF3-Zn-onw" firstAttribute="centerY" secondItem="otB-KU-kDC" secondAttribute="centerY" id="zyF-3k-Wvo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="otB-KU-kDC" secondAttribute="trailing" id="9LH-lx-LKK"/>
+                <constraint firstItem="otB-KU-kDC" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="ULh-SN-VsO"/>
+                <constraint firstItem="otB-KU-kDC" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Ymx-BD-X2O"/>
+                <constraint firstAttribute="bottom" secondItem="otB-KU-kDC" secondAttribute="bottom" id="okM-gv-jcV"/>
+            </constraints>
+            <connections>
+                <outlet property="categoryTitle" destination="QQr-Oa-Gtf" id="7DT-DT-lLJ"/>
+                <outlet property="seeAllButton" destination="GVM-bv-APr" id="Fce-u3-isu"/>
+            </connections>
+            <point key="canvasLocation" x="79.710144927536234" y="81.696428571428569"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
